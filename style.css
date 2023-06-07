@@ -621,11 +621,13 @@ nav ul li a{
       left: 0;
     }
     100% {
-      left: calc(50% - 300px);
+      left: calc(50% - 50px);
     }
   }
 
   /* end of trust section */
+
+  
 
   .box {
     width: 550px;
@@ -638,6 +640,7 @@ nav ul li a{
     border-radius: 10px;
     margin-left: 870px;
     position: relative;
+    
   }
 
   .box input,
@@ -646,16 +649,22 @@ nav ul li a{
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 10px;
+  
 }
 
 .box label {
   position: absolute;
   top: 0;
   left: 0;
-  transition: top 0.3s ease;
+  transition: all 0.2s ease-in-out;
   pointer-events: none;
   font-size: 16px;
   color: #999;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color:var(--orange-color) ;
 }
 
 .box input:focus + label,
@@ -664,7 +673,6 @@ nav ul li a{
 .box textarea:not(:placeholder-shown) + label {
   top: -20px;
   font-size: 14px;
-  color: var(--black-colour); /* Adjust the color as desired */
 
 }
   
@@ -690,7 +698,7 @@ nav ul li a{
 
   .btt{
     margin-left: 850px;
-    margin-top: 50px;
+    margin-top: 50px;  
   }
   
   .map{
@@ -825,4 +833,21 @@ footer .social1{
 
 .scroll-button:hover {
     background-color:#E20A17 ;
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(0px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateX(0);
 }

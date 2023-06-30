@@ -62,3 +62,7 @@ function animateElements() {
 window.addEventListener('scroll', animateElements);
 window.addEventListener('resize', animateElements);
 window.addEventListener('load', animateElements);
+
+function myFunction(x) {
+    x.classList.toggle("change");
+  }

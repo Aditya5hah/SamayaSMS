@@ -55,6 +55,7 @@ body{
 }
 
 
+
 .header1{
     background: linear-gradient(89.95deg, #C3EDFB 0.05%, #E4F9FE 99.96%);
     position: absolute;
@@ -72,6 +73,115 @@ margin-left: 1028px;
 top: 0px;
 background: #002D71;
 }
+
+.htl-section{
+  margin-top: 800px;
+  width: 1200px;
+  margin-left: 160px;
+}
+
+
+.gradient-border {
+  --borderWidth: 3px;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #e20a17, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #2c75e2, #002d71);
+  border-radius:15px;
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+.htl-section-inner{
+  position: relative;
+  background-color: #fff;
+  padding:40px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  border-radius:15px;
+}
+
+.htl-section-inner h2 span{
+  color: #e20a17;
+  
+}
+
+.htl-section-inner .point-num{
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+  background-color: #e20a17;
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  animation: bounce1 3s infinite ease-in-out;
+}
+
+@-webkit-keyframes bounce1 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce1 {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.htl-section-inner h2{
+  margin-bottom: 0;
+  font-size: 40px
+}
+
+
 /* nav start */
 nav{
     display: flex;
@@ -136,7 +246,6 @@ nav ul li a{
 }
 /* nav end */
 
-
 .small{
     color: black;
 }
@@ -146,7 +255,7 @@ nav ul li a{
 .wrapper{
     max-width:1134px;
     margin:0 auto;
-    margin-top: 800px;
+    margin-top: 100px;
 }
 
 .con{
@@ -349,7 +458,7 @@ nav ul li a{
     position: relative;
     display: flex;
     justify-content: flex-start;
-    margin-top: 180px;
+    margin-top: 150px;
 }
 
 .image-wrapper .laptopcontent {
@@ -373,8 +482,8 @@ nav ul li a{
     position: relative;
     top: 2rem;
    justify-content: flex-start;
-   margin-top: 20px;
-   margin-left: 90px;
+   margin-top: -380px;
+   margin-left: 890px;
 }
 
 .eazy h1 {
@@ -760,7 +869,7 @@ input:focus, textarea:focus {
 
 footer{
   background: linear-gradient(89.95deg, #C3EDFB 0.05%, #E4F9FE 99.96%);
-  padding: 70px 0px;
+  padding: 70px 00px;
 
 }
 
@@ -781,15 +890,9 @@ footer .logo-container{
     display: grid;
     grid-template-columns: 3fr 2fr 2fr 3fr;
 } 
-footer .social{
-    margin-left: -40px;
-    margin-right: 1px;
-}
-footer .social1{
-    margin-left: -40px;
-}
+
 .copyright{
-    margin-top: 8rem;
+    margin-top: 5rem;
     margin-left: 32rem;
     font-size: 17px;
 }
@@ -797,6 +900,36 @@ footer .social1{
 .foot{
   margin-left: 100px;
   height: 400px;
+}
+
+.fa {
+  padding: 10px 10px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 5px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    background: #002D71;
+    color: white;
+}
+
+.fa-facebook {
+  color: rgb(76, 71, 71);
+  background: white;
+}
+
+.fa-twitter {
+  color: rgb(76, 71, 71);
+  background: white;
+}
+
+.fa-instagram {
+  color: rgb(76, 71, 71);
+  background: white;
 }
 
 /* footer end */
@@ -850,4 +983,369 @@ footer .social1{
 .fade-in {
   opacity: 1;
   transform: translateX(0);
+}
+
+@media (max-width: 700px){
+  body{
+    width: 1570px;
+  }
+  .logo{
+    display: none;
+  }
+
+  .header2{
+    display: none;
+  }
+
+  .header1{
+    width: 1570px;
+    height: 100rem;
+  }
+ 
+  .con{
+    margin-top: 350px;
+  }
+
+  .con h1 span.animated-text {
+    font-size: 100px;
+  }
+
+  .con h1{
+    font-size: 100px;
+  }
+
+  .con .btn{
+    font-size: 40px ;
+    font-weight:normal;
+  }
+
+  .pp{
+    font-size: 50px;
+  }
+
+  .iphone-image{
+    margin-top: 400px;
+    width: 450px;
+    margin-left: 70rem;
+  }
+
+  .card{
+    margin-top: 590px;
+    width: 450px;
+    height: auto;
+    margin-left: 40rem;
+  }
+
+  .card__photos img{
+    width: 100px;
+  }
+
+  .card__headline{
+    font-size: 30px;
+  }
+
+  .htl-section{
+    margin-top: 2000px;
+    width: 1200px;
+    margin-left: 170px;
+  }
+
+  .htl-section-inner h2{
+    margin-bottom: 0;
+    font-size: 60px;
+  }
+
+  .center-heading{
+    margin-top: 100px;
+    margin-left: 100px;
+  }
+
+  .wrapper{
+    width: 300%;
+    margin-left: 200px;
+  }
+
+  .head h1{
+    font-size: 60px;
+    margin-left: -10px;
+  }
+
+  .car{
+    width: 500px;
+    height: 700px;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+
+  .car img{
+    width: 35%;
+  }
+
+  .car h4{
+    font-size: 40px;
+  }
+
+  .car p{
+    font-size: 35px;
+  }
+
+  .image-wrapper .laptopimg{
+  width: 1000px;
+  height: 600px;
+  margin-left: 70px;
+  margin-top: 120px;
+}
+
+.image-wrapper .laptopcontent{
+  width: 870px;
+  height: 510px;
+  margin-left: 70px;
+  margin-top: 150px;
+}
+
+.easy{
+  width: 1570px;
+  height:1600px;
+  margin-top: 50px;
+}
+
+.eazy{
+  margin-top: 100px;
+  margin-left: 150px;
+}
+
+.eazy h1{
+  font-size: 70px;
+}
+
+.eazy p{
+  font-size: 40px;
+}
+
+.eazy .btn{
+  font-size: 40px;
+}
+
+.circle{
+  display: none;
+}
+
+.line{
+  display: none;
+}
+
+.fourth-right{
+  margin-top: 600px;
+  margin-left: -1200px;
+}
+
+.fourth-right img{
+  width: 190px;
+}
+
+.fourth-right h1{
+  font-size: 40px;
+}
+
+.fourth-right p{
+  font-size: 30px;
+}
+
+.fourth{
+  width: 1530px;
+}
+
+.fourth .writing{
+  margin-left: 200px;
+}
+
+.fourth .writing h1{
+  font-size: 60px;
+}
+
+.fourth .writing p{
+  font-size: 40px;
+}
+
+.fourth .writing a{
+  font-size: 40px;
+}
+
+.fourth .writing .broke{
+  display: none;
+}
+
+.image-wrapper1{
+  margin-bottom: 100px;
+}
+
+.image-wrapper2{
+  margin-bottom: 100px;
+}
+
+.wrap .goal h1{
+  font-size: 70px;
+  margin-top: -80px;
+}
+
+.wrap .goal p{
+  font-size: 30px;
+}
+
+.wrap .goal a{
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.wrap .goal img{
+  width: 500px;
+  margin-top: -111px;
+  margin-left: 200px;
+}
+
+.wrap{
+  width: 1570px;
+}
+
+.samaya{
+  width: 1570px;
+  height: auto;
+  margin-left: 250px;
+}
+
+.samaya h1{
+  font-size: 80px;
+  width: 1000px;
+}
+
+.trust{
+  display: none;
+}
+
+.embed{
+  display: none;
+}
+
+.forsection{
+  margin-top: 700px;
+  margin-left: -800px;
+}
+
+.form{
+  font-size: 40px;
+  width: 1000px;
+  margin-bottom: 180px;
+}
+
+.box{
+  width: 1300px;
+  height: 200px;
+  margin-left: 935px;
+}
+
+.detail label[for="name"],
+label[for="email"],
+label[for="phone"],
+label[for="message"] {
+  font-size: 40px !important;
+
+  margin-top: -50px;
+}
+
+.btt{
+  font-size: 40px;
+}
+
+.conte{
+  width: 1000px;
+}
+
+.img-wrap .text-wrapper h2{
+  font-size: 70px;
+}
+
+.img-wrap .text-wrapper p{
+  font-size: 40px;
+}
+
+.last{
+  height: 1000px;
+  width: 1570px;
+}
+
+.phn{
+  width: 1200px;
+  height: auto;
+  margin-top: 300px;
+  margin-left: 800px
+}
+
+.las{
+  margin-left: -200px;
+  margin-top: 60px;
+}
+
+.las h1{
+  font-size: 60px;
+}
+
+.las p{
+  font-size: 30px;
+}
+
+.btns{
+  font-size: 30px;
+  margin-top: 150px;
+  margin-left: -200px;
+}
+
+footer{
+  width: 1570px;
+  height: 2000px;
+}
+
+.foot{
+  display: grid;
+}
+
+.logo-container{
+  margin-top: 100px;
+}
+
+.log{
+  width: 300px;
+}
+
+.contain p{
+  font-size: 40px;
+}
+
+.contain h3{
+  font-size: 40px;
+}
+
+footer .logo-container{
+  grid-template-columns: 2fr 2fr;
+}
+
+.contain li{
+  font-size: 40px;
+}
+
+.contain li img{
+  width:40px;
+}
+
+.copyright{
+  font-size: 37px;
+  margin-left: 200px;
+  margin-top: 400px;
+}
+
+.scroll-button{
+  font-size: 40px;
+  width: 100px;
+  height: 100px;
+}
+
 }
